@@ -1,0 +1,53 @@
+- !<AssetImportMetadata/5e909d20-e65b-4bec-886d-388c851e9bfb>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 3765c416-d7a2-419f-9127-ef9817768cea
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 3765c416-d7a2-419f-9127-ef9817768cea
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 4d97972c-ae70-4203-a584-3341d5c811d8
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/4d97972c-ae70-4203-a584-3341d5c811d8>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 6fdb0c77-b400-4a12-891a-90de0e0a886c
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    musicVolume: false
+    sfxVolume: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - sfxVolume: 0.750000
+      musicVolume: 0.220000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Audio – UI cues and the ambient bed</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float sfxVolume = 0.35 {"hint":"Volume of the one-shot interface cues.", "widget":"slider", "min":0, "max":1, "step":0.05}'
+    - '// @input float musicVolume = 0.45 {"hint":"Volume of the looping ambient bed. Set to 0 to play in silence.", "widget":"slider", "min":0, "max":1, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'

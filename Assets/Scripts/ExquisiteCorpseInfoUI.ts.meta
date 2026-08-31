@@ -1,0 +1,80 @@
+- !<AssetImportMetadata/c08712b1-10ab-4b82-ab1a-932cff08129a>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 2c314030-affe-478c-b2c7-a1779d3fe717
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 2c314030-affe-478c-b2c7-a1779d3fe717
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> e1e606c1-804e-4535-88dc-055259a7a6c1
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/e1e606c1-804e-4535-88dc-055259a7a6c1>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 81b0ea88-7e75-4c6c-b8a6-28b1261c17e1
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    accentColor: false
+    bodyScale: false
+    headingScale: false
+    historyText: false
+    historyTitle: false
+    panelHeightCm: false
+    panelOpacity: false
+    panelWidthCm: false
+    readDistanceCm: false
+    rulesText: false
+    titleText: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - panelWidthCm: !<float> 47.000000
+      panelHeightCm: !<float> 56.000000
+      titleText: How to Play
+      rulesText: "Each player draws one section of a body.|You see only a sliver of the section above.|Press DONE, then hand the glasses on.|The whole creature is revealed at the end."
+      historyTitle: Where it comes from
+      historyText: "A parlour game invented by the Surrealists|in Paris around 1925. It takes its name from|the first sentence it produced: the exquisite|corpse shall drink the new wine."
+      headingScale: 0.620000
+      bodyScale: 0.650000
+      readDistanceCm: !<float> 130.000000
+      accentColor: !<Vec4> {x: 0.090000, y: 0.690000, z: 0.770000, w: 1.000000}
+      panelOpacity: 0.600000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Info UI – rules and history, with its own PLAY</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float panelWidthCm = 62 {"hint":"Panel width in centimetres.", "widget":"slider", "min":30, "max":90, "step":1}'
+    - '// @input float panelHeightCm = 56 {"hint":"Panel height in centimetres.", "widget":"slider", "min":20, "max":80, "step":1}'
+    - '// @input string titleText = "How to Play" {"hint":"Heading at the top of the card."}'
+    - '// @input string rulesText = "Each player draws one section of a body.|You see only a sliver of the section above.|Press DONE (✓), then hand the glasses on.|The whole creature is revealed at the end." {"hint":"The rules, one step per line. Use | to separate lines."}'
+    - '// @input string historyTitle = "Where it comes from" {"hint":"Heading above the history paragraph."}'
+    - '// @input string historyText = "A parlour game invented by the Surrealists|in Paris around 1925. It takes its name from|the first sentence it produced: the exquisite|corpse shall drink the new wine." {"hint":"The history paragraph. Use | to separate lines."}'
+    - '// @input float headingScale = 0.62 {"hint":"Size of the headings relative to the read distance.", "widget":"slider", "min":0.2, "max":2, "step":0.05}'
+    - '// @input float bodyScale = 0.45 {"hint":"Size of the body lines relative to the read distance.", "widget":"slider", "min":0.2, "max":2, "step":0.05}'
+    - '// @input float readDistanceCm = 130 {"hint":"Distance from the viewer in centimetres. Scales all text on this card.", "widget":"slider", "min":50, "max":250, "step":5}'
+    - '// @input vec4 accentColor = "{0.09, 0.69, 0.77, 1.0}" {"hint":"Outline colour of the buttons and the accent heading.", "widget":"color"}'
+    - "// @input float panelOpacity = 0.6 {\"hint\":\"Opacity of the panel's backing plate. Specs is additive, so a solid plate ADDS light. Keep low.\", \"widget\":\"slider\", \"min\":0.05, \"max\":1, \"step\":0.05}"
+    - '// @ui {"widget":"group_end"}'

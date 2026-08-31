@@ -1,0 +1,47 @@
+# BEGIN Lens Studio managed Agents-Docs block
+.mcp.json
+.cursor/mcp.json
+.vscode/mcp.json
+.codex/config.toml
+.claude/settings.local.json
+# END Lens Studio managed Agents-Docs block
+
+# ---------------------------------------------------------------------------
+# Lens Studio generated / local state
+# ---------------------------------------------------------------------------
+# Cache/, Support/, Workspaces/ and PluginsUserPreferences/ each carry their own
+# Lens Studio managed .gitignore containing "*". Leave those alone — Lens Studio
+# recreates them if deleted. Listed here only so it is obvious they are covered.
+Cache/
+Support/
+Workspaces/
+PluginsUserPreferences/
+
+# Editor instance lock. The numeric suffix is per-machine, so committing it
+# guarantees a conflict every time two people open the project.
+*.esproj.*.lock
+
+# ---------------------------------------------------------------------------
+# Agent tooling scratch
+# ---------------------------------------------------------------------------
+# Regenerated on demand by the VirtualScene MCP tool's "read" command.
+.virtual-scene.json
+
+# Font candidates pulled down while shortlisting a UI typeface. The fonts the
+# Lens actually uses live in Assets/Fonts/.
+.font_tmp/
+
+# Agent session log. Currently committed — uncomment to stop tracking it.
+# CLAD-prompt-log.txt
+
+# ---------------------------------------------------------------------------
+# OS / editor cruft
+# ---------------------------------------------------------------------------
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+desktop.ini
+*.swp
+*~

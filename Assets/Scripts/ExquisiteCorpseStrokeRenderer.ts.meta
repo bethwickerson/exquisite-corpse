@@ -1,0 +1,158 @@
+- !<AssetImportMetadata/93c02d4c-9ff5-438f-b5d2-31955136d3d1>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 81d61249-8d95-4484-9cbd-9d87afe9acdc
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 81d61249-8d95-4484-9cbd-9d87afe9acdc
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> c4a63a96-f386-4488-9b24-079477bc62bf
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/c4a63a96-f386-4488-9b24-079477bc62bf>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 96316616-244a-471a-a8b8-35bd659ff0cd
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    activeCornerArmCm: false
+    activeCornerBrightness: false
+    activeCornerColor: false
+    activeCornerOutsetCm: false
+    activeCornerWidthCm: false
+    blinkHoldSeconds: false
+    blinkIntervalSeconds: false
+    breathAmplitudeCm: false
+    breathSpeed: false
+    breathWavelengthCm: false
+    canvasOutlineWidthCm: false
+    foldDashCm: false
+    foldLineWidthCm: false
+    glowIntensity: false
+    glowSpread: false
+    guideBrightness: false
+    hairRipple: false
+    headRipple: false
+    legsRipple: false
+    lifeRampSeconds: false
+    mouthOpenAmount: false
+    mouthSpeed: false
+    neonMaterial: false
+    paletteColor1: false
+    paletteColor2: false
+    paletteColor3: false
+    paletteColor4: false
+    paletteColor5: false
+    paletteColor6: false
+    showCanvasGuides: false
+    strokeWidthCm: false
+    tiltDegrees: false
+    tiltSpeed: false
+    torsoRipple: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - neonMaterial: !<reference.Material> 00000000-0000-0000-0000-000000000000
+      strokeWidthCm: 0.200000
+      glowSpread: 2.500000
+      glowIntensity: 2.900000
+      showCanvasGuides: true
+      canvasOutlineWidthCm: 0.350000
+      foldLineWidthCm: 0.120000
+      foldDashCm: 2.500000
+      guideBrightness: 0.500000
+      activeCornerArmCm: 4.500000
+      activeCornerWidthCm: 0.650000
+      activeCornerOutsetCm: !<float> 0.000000
+      activeCornerColor: !<Vec4> {x: 0.321584, y: 0.629404, z: 0.637644, w: 0.530007}
+      tiltDegrees: 0.800000
+      tiltSpeed: 0.130000
+      lifeRampSeconds: 1.400000
+      breathAmplitudeCm: 0.550000
+      headRipple: !<float> 0.000000
+      hairRipple: 1.550000
+      torsoRipple: 0.600000
+      legsRipple: 0.700000
+      breathWavelengthCm: !<float> 21.000000
+      breathSpeed: 0.050000
+      mouthOpenAmount: 0.350000
+      mouthSpeed: 0.100000
+      blinkHoldSeconds: 0.120000
+      blinkIntervalSeconds: 4.950000
+      activeCornerBrightness: 2.150000
+      paletteColor1: !<Vec4> {x: 0.930037, y: 0.820798, z: 0.136751, w: 1.000000}
+      paletteColor2: !<Vec4> {x: 0.586557, y: 0.255833, z: 0.933852, w: 1.000000}
+      paletteColor3: !<Vec4> {x: 0.065766, y: 0.313970, z: 0.953307, w: 1.000000}
+      paletteColor4: !<Vec4> {x: 0.188083, y: 0.958740, z: 0.905715, w: 1.000000}
+      paletteColor5: !<Vec4> {x: 0.971328, y: 0.215808, z: 0.431449, w: 1.000000}
+      paletteColor6: !<Vec4> {x: 0.261067, y: 0.736492, z: 0.124544, w: 1.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Stroke Renderer – neon ribbons, one mesh per band</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input Asset.Material neonMaterial {"hint":"Additive vertex-colour material used for every stroke. From the SimpleVertexBaseColor package."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float strokeWidthCm = 0.45 {"hint":"Width of the bright core of a stroke, in centimetres. Keep thin for detail.", "widget":"slider", "min":0.1, "max":3, "step":0.05}'
+    - '// @input float glowSpread = 4.2 {"hint":"How far the soft glow extends beyond the core, as a multiple of the core width.", "widget":"slider", "min":1.2, "max":10, "step":0.1}'
+    - '// @input float glowIntensity = 1.7 {"hint":"Overall emissive brightness of the strokes. The material is additive, so this is literally how much light each stroke throws.", "widget":"slider", "min":0.2, "max":4, "step":0.05}'
+    - '// @input bool showCanvasGuides = true {"hint":"Draw the canvas guides: one solid outline around the whole canvas, plus a thin dashed line at each fold."}'
+    - '// @input float canvasOutlineWidthCm = 0.42 {"hint":"Thickness of the solid outline around the whole canvas, in centimetres.", "widget":"slider", "min":0.05, "max":1.5, "step":0.01}'
+    - '// @input float foldLineWidthCm = 0.12 {"hint":"Thickness of the dashed fold lines, in centimetres. Kept thin so they read as creases, not as drawing.", "widget":"slider", "min":0.03, "max":0.8, "step":0.01}'
+    - '// @input float foldDashCm = 2.5 {"hint":"Dash length of the fold lines in centimetres. The gap is half this.", "widget":"slider", "min":0.5, "max":12, "step":0.5}'
+    - '// @input float guideBrightness = 0.7 {"hint":"Brightness of the canvas guides. Keep low so they never compete with the drawing.", "widget":"slider", "min":0.05, "max":2, "step":0.05}'
+    - '// @input float activeCornerArmCm = 6 {"hint":"Length of each leg of the corner brackets marking the ACTIVE band, in centimetres. Clamped so opposite arms can never join into a full box.", "widget":"slider", "min":1, "max":20, "step":0.5}'
+    - '// @input float activeCornerWidthCm = 0.34 {"hint":"Line weight of the active-band corner brackets, in centimetres.", "widget":"slider", "min":0.05, "max":1.5, "step":0.02}'
+    - "// @input float activeCornerOutsetCm = 0.38 {\"hint\":\"How far OUTSIDE the band edge the corner brackets sit, in centimetres. For brackets that just touch the canvas line without overlapping it, use half of each line's width added together — (Canvas Outline Width + Active Corner Width) / 2. Keep above zero: band 0 shares three edges with the canvas outline, so at zero its brackets are drawn underneath it and vanish.\", \"widget\":\"slider\", \"min\":0, \"max\":8, \"step\":0.02}"
+    - '// @input vec4 activeCornerColor = "{0.0, 0.85, 1.0, 0.75}" {"hint":"Colour of the active-band corner brackets. Specs is additive, so the alpha channel cannot make them see-through the way it would on an opaque display — it is folded into brightness instead, which is what reads as semi-transparent here.", "widget":"color"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input float tiltDegrees = 1.2 {"hint":"Peak lean either side of upright, in degrees. The whole drawing rotates about its FOOT, so it tips like a standing body — the head travels furthest, the feet stay planted. Bias it larger than looks right up close; it reads as subtle from across a room.", "widget":"slider", "min":0, "max":8, "step":0.1}'
+    - '// @input float tiltSpeed = 0.16 {"hint":"Leans per second. One full back-and-forth is a whole cycle, so low values read as slow breathing.", "widget":"slider", "min":0.02, "max":1, "step":0.01}'
+    - '// @input float lifeRampSeconds = 1.6 {"hint":"Seconds the movement takes to ease up from a standstill. Without this the drawing jumps on its first animated frame, since the lean is mid-swing at time zero.", "widget":"slider", "min":0, "max":5, "step":0.1}'
+    - '// @ui {"widget":"separator"}'
+    - '// @input float breathAmplitudeCm = 0.7 {"hint":"Base per-stroke ripple, in centimetres. The three multipliers below scale it per body part.", "widget":"slider", "min":0, "max":3, "step":0.05}'
+    - '// @input float headRipple {"hint":"Ripple on the HEAD, as a multiple of the base. Zero by default: the head reads best swaying as one rigid piece, so the face holds together.", "widget":"slider", "min":0, "max":2, "step":0.05}'
+    - "// @input float hairRipple = 1.6 {\"hint\":\"Ripple on anything OUTSIDE the head's outline — most likely hair, ears or antennae. Highest of the lot, since loose strands are what should move most.\", \"widget\":\"slider\", \"min\":0, \"max\":3, \"step\":0.05}"
+    - '// @input float torsoRipple = 0.55 {"hint":"Ripple on the TORSO (any middle band), as a multiple of the base.", "widget":"slider", "min":0, "max":2, "step":0.05}'
+    - '// @input float legsRipple = 1 {"hint":"Ripple on the LEGS (the bottom band), as a multiple of the base.", "widget":"slider", "min":0, "max":2, "step":0.05}'
+    - '// @input float breathWavelengthCm = 26 {"hint":"Centimetres along a stroke for one full ripple. Smaller makes a line shimmer; larger makes it undulate.", "widget":"slider", "min":2, "max":60, "step":1}'
+    - '// @input float breathSpeed = 0.28 {"hint":"Ripples per second.", "widget":"slider", "min":0.05, "max":2, "step":0.05}'
+    - '// @input float mouthOpenAmount = 0.7 {"hint":"How far the mouth opens and closes, as a fraction of its own height.", "widget":"slider", "min":0, "max":2, "step":0.05}'
+    - '// @input float mouthSpeed = 0.22 {"hint":"Mouth movements per second.", "widget":"slider", "min":0.05, "max":2, "step":0.05}'
+    - '// @input float blinkHoldSeconds = 0.14 {"hint":"How long an eye stays shut, in seconds.", "widget":"slider", "min":0.04, "max":0.5, "step":0.01}'
+    - '// @input float blinkIntervalSeconds = 3.2 {"hint":"Average seconds between blinks. Actual gaps vary either side of this so it never feels metronomic.", "widget":"slider", "min":0.5, "max":12, "step":0.25}'
+    - '// @ui {"widget":"separator"}'
+    - "// @input float activeCornerBrightness = 1.25 {\"hint\":\"Brightness of the active-band corner brackets. Above the other guides, since these are what say 'draw here'.\", \"widget\":\"slider\", \"min\":0.05, \"max\":3, \"step\":0.05}"
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Palette"}'
+    - '// @input vec4 paletteColor1 = "{0.0, 0.9, 1.0, 1.0}" {"hint":"Palette slot 1. Any player can pick any slot at any time.", "widget":"color"}'
+    - '// @input vec4 paletteColor2 = "{1.0, 0.18, 0.6, 1.0}" {"hint":"Palette slot 2. Any player can pick any slot at any time.", "widget":"color"}'
+    - '// @input vec4 paletteColor3 = "{0.7, 1.0, 0.1, 1.0}" {"hint":"Palette slot 3. Any player can pick any slot at any time.", "widget":"color"}'
+    - '// @input vec4 paletteColor4 = "{1.0, 0.62, 0.1, 1.0}" {"hint":"Palette slot 4. Any player can pick any slot at any time.", "widget":"color"}'
+    - '// @input vec4 paletteColor5 = "{0.62, 0.4, 1.0, 1.0}" {"hint":"Palette slot 5. Any player can pick any slot at any time.", "widget":"color"}'
+    - '// @input vec4 paletteColor6 = "{1.0, 0.95, 0.35, 1.0}" {"hint":"Palette slot 6. Any player can pick any slot at any time.", "widget":"color"}'
+    - '// @ui {"widget":"group_end"}'

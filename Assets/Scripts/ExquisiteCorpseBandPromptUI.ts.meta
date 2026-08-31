@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/7157af2e-3e49-41c6-bc70-bdb968e83887>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> db1a9692-aa3a-4319-aa06-5c28971178bc
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> db1a9692-aa3a-4319-aa06-5c28971178bc
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> ae579b28-ae91-491e-97ad-d80b4cca1def
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/ae579b28-ae91-491e-97ad-d80b4cca1def>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: f5542e39-3302-4480-af4f-e0f6889c19f6
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    headlineScale: false
+    readDistanceCm: false
+    textScale: false
+    widthCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - widthCm: !<float> 50.000000
+      readDistanceCm: !<float> 150.000000
+      textScale: 0.800000
+      headlineScale: 1.900000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Band Prompt – in-canvas instruction for the active band</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float widthCm = 54 {"hint":"Width the prompt line is allowed to occupy, in centimetres.", "widget":"slider", "min":10, "max":80, "step":1}'
+    - '// @input float readDistanceCm = 150 {"hint":"Distance from the viewer in centimetres. Scales the text.", "widget":"slider", "min":50, "max":250, "step":5}'
+    - "// @input float textScale = 0.7 {\"hint\":\"Extra multiplier on the prompt's text size. The prompt uses the Caption role, so this sits it between the small hint labels and a headline.\", \"widget\":\"slider\", \"min\":0.5, \"max\":2.5, \"step\":0.05}"
+    - '// @input float headlineScale = 1 {"hint":"Size of the finished-piece headline relative to the read distance. Bounded by Width Cm — a longer title needs a lower value or a wider cell, or it clips rather than wrapping.", "widget":"slider", "min":0.15, "max":2.5, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'

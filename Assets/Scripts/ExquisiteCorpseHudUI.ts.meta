@@ -1,0 +1,77 @@
+- !<AssetImportMetadata/11e83a05-9a76-46b0-a6d1-a17571fb8073>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 12cbeb29-768d-4b8d-b826-ea9fe374c23f
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 12cbeb29-768d-4b8d-b826-ea9fe374c23f
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> c26a99fd-9a79-470c-98d7-25850ebf5a5c
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/c26a99fd-9a79-470c-98d7-25850ebf5a5c>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 9cd243ce-1d45-4554-bbc9-2e2c1d975cb0
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    accentColor: false
+    buttonSizeCm: false
+    extraWidthCm: false
+    iconScale: false
+    panelHeightCm: false
+    panelOpacity: false
+    playerGapCm: false
+    playerIconCm: false
+    playerNumberScale: false
+    readDistanceCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - panelHeightCm: !<float> 12.000000
+      buttonSizeCm: !<float> 8.000000
+      extraWidthCm: !<float> -2.000000
+      iconScale: 1.150000
+      playerGapCm: 0.500000
+      playerIconCm: 2.500000
+      playerNumberScale: 0.650000
+      readDistanceCm: !<float> 150.000000
+      accentColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      panelOpacity: 0.750000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">HUD Rail – vertical DONE / player / UNDO beside the canvas</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float panelHeightCm = 34 {"hint":"Rail height in centimetres.", "widget":"slider", "min":14, "max":60, "step":0.5}'
+    - '// @input float buttonSizeCm = 6 {"hint":"Diameter of the round DONE and UNDO buttons, in centimetres. Below about 6cm at this distance they fall under the gaze-dwell target minimum.", "widget":"slider", "min":4, "max":16, "step":0.5}'
+    - '// @input float extraWidthCm = 0.1 {"hint":"Space added around the controls to make the plate, in centimetres. This is the direct width control: the rail is always the widest control plus this, so it can never end up too narrow to hold its contents. Negative pulls the plate in tighter than the buttons.", "widget":"slider", "min":-2, "max":8, "step":0.1}'
+    - '// @input float iconScale = 1.15 {"hint":"Multiplier on the icon inside each button. Above 1 makes the glyph fill more of the circle.", "widget":"slider", "min":0.5, "max":2, "step":0.05}'
+    - '// @input float playerGapCm = 1.6 {"hint":"Extra space below the player row, in centimetres. Pushes the buttons down clear of the prompt line.", "widget":"slider", "min":0, "max":8, "step":0.1}'
+    - '// @input float playerIconCm = 4 {"hint":"Size of the player-count icon in centimetres.", "widget":"slider", "min":2, "max":10, "step":0.5}'
+    - '// @input float playerNumberScale = 0.55 {"hint":"Size of the player number beside the head icon, relative to the read distance.", "widget":"slider", "min":0.25, "max":1.5, "step":0.05}'
+    - '// @input float readDistanceCm = 150 {"hint":"Distance from the viewer in centimetres. Scales text on this rail.", "widget":"slider", "min":50, "max":250, "step":5}'
+    - '// @input vec4 accentColor = "{1.0, 1.0, 1.0, 1.0}" {"hint":"Outline colour of the UNDO circle.", "widget":"color"}'
+    - "// @input float panelOpacity = 0.65 {\"hint\":\"Opacity of the rail's backing plate. Specs is additive, so a solid plate ADDS light. Keep low, or zero for no plate at all.\", \"widget\":\"slider\", \"min\":0, \"max\":1, \"step\":0.05}"
+    - '// @ui {"widget":"group_end"}'

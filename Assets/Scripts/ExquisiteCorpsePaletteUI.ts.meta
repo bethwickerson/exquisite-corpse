@@ -1,0 +1,65 @@
+- !<AssetImportMetadata/75c63235-6693-4efb-8c5e-1b8bc5902450>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> bb9f3cbd-092f-4bb9-b457-a98153af365a
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> bb9f3cbd-092f-4bb9-b457-a98153af365a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 2a1c4f43-f640-4895-a8fc-38eaaebfa648
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/2a1c4f43-f640-4895-a8fc-38eaaebfa648>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 141c17f1-d1df-4425-a19c-2b4610424fb2
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    chipGapCm: false
+    extraWidthCm: false
+    minTouchSizeCm: false
+    panelOpacity: false
+    selectionRingBleedCm: false
+    swatchSizeCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - swatchSizeCm: !<float> 2.000000
+      minTouchSizeCm: !<float> 6.000000
+      extraWidthCm: -0.100000
+      chipGapCm: 2.900000
+      selectionRingBleedCm: 0.200000
+      panelOpacity: 0.650000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Palette – pick a drawing colour at any time</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float swatchSizeCm = 4 {"hint":"Size of the DRAWN colour chip in centimetres. The rail sizes itself around this, so it is the width control. The hit area stays at Min Touch Size, so shrinking this does not make the chips harder to pinch.", "widget":"slider", "min":1.5, "max":14, "step":0.25}'
+    - "// @input float minTouchSizeCm = 6 {\"hint\":\"Smallest the invisible hit area may be, in centimetres. A chip's own outline is not drawn, so this can exceed the visible chip freely. Below about 6cm at the default placement distance the chips fall under the reliable-pinch minimum.\", \"widget\":\"slider\", \"min\":2, \"max\":12, \"step\":0.5}"
+    - '// @input float extraWidthCm = 0.1 {"hint":"Space added around the chips to make the plate, in centimetres. This is the direct width control: the rail is always the chip plus its ring plus this, so it can never end up too narrow to hold them. Negative pulls the plate in tighter than the chips.", "widget":"slider", "min":-2, "max":8, "step":0.1}'
+    - '// @input float chipGapCm = 1 {"hint":"Vertical gap between chips in centimetres.", "widget":"slider", "min":0, "max":6, "step":0.1}'
+    - '// @input float selectionRingBleedCm = 0.8 {"hint":"How far the selection outline stands proud of the chip, in centimetres. Keep it small so the line hugs the chip; a wide value turns the outline into a block sitting around it.", "widget":"slider", "min":0.2, "max":4, "step":0.1}'
+    - "// @input float panelOpacity = 0.3 {\"hint\":\"Opacity of the panel's backing plate.\", \"widget\":\"slider\", \"min\":0.05, \"max\":1, \"step\":0.05}"
+    - '// @ui {"widget":"group_end"}'

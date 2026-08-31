@@ -1,0 +1,65 @@
+- !<AssetImportMetadata/1ed1e591-478f-4fd1-b08d-919017d05e9f>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> d546a061-a0ca-43a2-bde6-0bc5493bef4d
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> d546a061-a0ca-43a2-bde6-0bc5493bef4d
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 05fa4524-3a5d-499f-a3a0-7e85e7920751
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/05fa4524-3a5d-499f-a3a0-7e85e7920751>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: a61c7919-f2c6-4827-bf74-e4f1595a6739
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    bandHeightCm: false
+    bandViewingRatio: false
+    canvasWidthCm: false
+    placementDistanceCm: false
+    seamCm: false
+    topAboveEyeCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - canvasWidthCm: !<float> 45.000000
+      bandHeightCm: !<float> 37.000000
+      seamCm: !<float> 6.000000
+      placementDistanceCm: !<float> 170.000000
+      bandViewingRatio: !<float> 4.000000
+      topAboveEyeCm: !<float> 30.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Canvas Controller – invisible plane, band maths, placement</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float canvasWidthCm = 56 {"hint":"Canvas width in centimetres. Sized to fit the Specs display: the usable area is about 53x77cm at 110cm, so at the default 150cm placement roughly 72cm wide fits edge to edge.", "widget":"slider", "min":30, "max":100, "step":1}'
+    - "// @input float bandHeightCm = 28 {\"hint\":\"Height of ONE player's band in centimetres. Total canvas height is this times the player count. Three bands at 32cm fit the display with margin to spare.\", \"widget\":\"slider\", \"min\":15, \"max\":60, \"step\":1}"
+    - '// @input float seamCm = 3.5 {"hint":"How much of the band above is visible as the seam, in centimetres. A narrow splice is the whole point of the game — the less you see, the funnier the reveal.", "widget":"slider", "min":0.5, "max":25, "step":0.5}'
+    - '// @input float placementDistanceCm = 150 {"hint":"Closest the canvas will ever be placed, in centimetres.", "widget":"slider", "min":60, "max":400, "step":5}'
+    - '// @input float bandViewingRatio = 4 {"hint":"Distance is set so ONE band is comfortable to draw in, as a multiple of band height. The whole canvas need not fit in view.", "widget":"slider", "min":2, "max":8, "step":0.1}'
+    - '// @input float topAboveEyeCm = 48 {"hint":"How far the TOP of the canvas sits above eye level, in centimetres. At the default a three-band canvas centres on the eye line and fits the display; taller canvases anchor their top here instead of towering overhead.", "widget":"slider", "min":0, "max":120, "step":2}'
+    - '// @ui {"widget":"group_end"}'

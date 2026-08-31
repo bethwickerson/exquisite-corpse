@@ -1,0 +1,56 @@
+- !<AssetImportMetadata/9d73e50c-f6fc-4329-9c79-4e2ae0af2589>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 40b74ba9-18b4-4865-9022-10988282513a
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 40b74ba9-18b4-4865-9022-10988282513a
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 906c733b-5a35-45fc-97ee-90c41cc8f9ac
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/906c733b-5a35-45fc-97ee-90c41cc8f9ac>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 747f4929-2c28-4130-86ba-51103bf892cf
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    maxUndoLevels: false
+    minPointSpacingCm: false
+    smoothing: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - minPointSpacingCm: 0.500000
+      smoothing: 0.550000
+      maxUndoLevels: !<float> 20.000000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Draw Controller – pinch to draw, clipped to your band</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float minPointSpacingCm = 0.6 {"hint":"Minimum travel on the canvas before a new point is recorded, in centimetres.", "widget":"slider", "min":0.05, "max":3, "step":0.05}'
+    - '// @input float smoothing = 0.55 {"hint":"Smoothing on the drawn point. 0 is raw and jittery, 0.9 is very smooth but laggy.", "widget":"slider", "min":0, "max":0.95, "step":0.05}'
+    - '// @input float maxUndoLevels = 24 {"hint":"How many gestures a player can undo within their own turn.", "widget":"slider", "min":5, "max":60, "step":1}'
+    - '// @ui {"widget":"group_end"}'

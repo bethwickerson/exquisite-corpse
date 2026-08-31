@@ -1,0 +1,68 @@
+- !<AssetImportMetadata/ba77b389-1133-4910-a585-bad27c467187>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 647b6df2-a6f4-44bc-8a59-7b8b3b0542a3
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 647b6df2-a6f4-44bc-8a59-7b8b3b0542a3
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 92bbd1a5-1faf-44e3-ac69-9fe598ac09bc
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/92bbd1a5-1faf-44e3-ac69-9fe598ac09bc>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: be73966e-6d3d-4264-a53c-efb79171bfc0
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    accentColor: false
+    instructionScale: false
+    instructionText: false
+    lockLabel: false
+    panelHeightCm: false
+    readDistanceCm: false
+    widthCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - widthCm: !<float> 56.000000
+      panelHeightCm: !<float> 14.000000
+      instructionText: PINCH AND DRAG TO POSITION
+      lockLabel: LOCK HERE
+      instructionScale: 0.550000
+      readDistanceCm: !<float> 150.000000
+      accentColor: !<Vec4> {x: 0.090000, y: 0.690000, z: 0.770000, w: 1.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Placement UI – drag prompt and LOCK HERE, no backing</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float widthCm = 56 {"hint":"Width the chrome is allowed to occupy, in centimetres.", "widget":"slider", "min":20, "max":90, "step":1}'
+    - '// @input float panelHeightCm = 14 {"hint":"Height of the chrome block, in centimetres. Used by Main to sit it clear of the canvas edge.", "widget":"slider", "min":6, "max":30, "step":0.5}'
+    - '// @input string instructionText = "PINCH AND DRAG TO POSITION" {"hint":"Instruction shown above the button. Uppercase to match the rest of the UI."}'
+    - '// @input string lockLabel = "LOCK HERE" {"hint":"Label on the commit button."}'
+    - '// @input float instructionScale = 0.55 {"hint":"Size of the instruction line relative to the type scale. Kept below 1 so it reads as a hint, not a headline.", "widget":"slider", "min":0.3, "max":1.5, "step":0.05}'
+    - '// @input float readDistanceCm = 150 {"hint":"Distance from the viewer in centimetres. Scales the text.", "widget":"slider", "min":50, "max":250, "step":5}'
+    - '// @input vec4 accentColor = "{0.09, 0.69, 0.77, 1.0}" {"hint":"Outline colour of the LOCK HERE button.", "widget":"color"}'
+    - '// @ui {"widget":"group_end"}'

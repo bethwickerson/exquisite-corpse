@@ -1,0 +1,104 @@
+- !<AssetImportMetadata/c0cbae5d-267f-441c-abf3-1b06bf4e06bb>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 667345fd-c1c6-4583-a9ff-2b439125fbc6
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 667345fd-c1c6-4583-a9ff-2b439125fbc6
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> d320d55f-19c0-49fd-9d43-f00faa7b6894
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/d320d55f-19c0-49fd-9d43-f00faa7b6894>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: f9258aaa-d7bd-40f2-abde-bd4160914d27
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    accentColor: false
+    logoSizeCm: false
+    logoTexture: false
+    logoTint: false
+    panelHeightCm: false
+    panelOpacity: false
+    panelWidthCm: false
+    readDistanceCm: false
+    ruleGapCm: false
+    ruleThicknessCm: false
+    straplineScale: false
+    straplineText: false
+    subtitleWord: false
+    textScale: false
+    titleLeadingCm: false
+    titleScale: false
+    titleText: false
+    utilityButtonSizeCm: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - logoTexture: !<reference.Texture> 00000000-0000-0000-0000-000000000000
+      utilityButtonSizeCm: !<float> 6.000000
+      panelWidthCm: !<float> 44.000000
+      panelHeightCm: !<float> 30.000000
+      titleText: EXQUISITE CORPSE
+      titleScale: 1.600000
+      subtitleWord: Corpse
+      straplineText: 3 players · one pair · one creation
+      straplineScale: 0.700000
+      ruleGapCm: !<float> 6.000000
+      titleLeadingCm: !<float> -6.000000
+      ruleThicknessCm: 0.150000
+      logoSizeCm: 21.500000
+      logoTint: !<Vec4> {x: 1.000000, y: 0.985534, z: 0.967269, w: 1.000000}
+      readDistanceCm: !<float> 95.000000
+      accentColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      panelOpacity: 0.700000
+      textScale: 1.100000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Setup UI – player count and canvas placement</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - '// @input Asset.Texture logoTexture {"hint":"Logo mark shown above the title. CorpseLogoAdditive is the luminance-flipped version that reads on an additive display; CorpseLogoOriginal is the artwork as supplied."}'
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float utilityButtonSizeCm = 6 {"hint":"Diameter of the round mute and info buttons under PLAY, in centimetres.", "widget":"slider", "min":3, "max":12, "step":0.5}'
+    - '// @input float panelWidthCm = 56 {"hint":"Panel width in centimetres.", "widget":"slider", "min":24, "max":80, "step":1}'
+    - '// @input float panelHeightCm = 68 {"hint":"Panel height in centimetres.", "widget":"slider", "min":16, "max":60, "step":1}'
+    - '// @input string titleText = "Exquisite" {"hint":"First word of the title, set upright in the serif face."}'
+    - '// @input float titleScale = 1.6 {"hint":"Size of the Exquisite Corpse lockup only, on top of Text Scale. Raise this to enlarge the headline without touching the strapline or the button.", "widget":"slider", "min":0.5, "max":3, "step":0.05}'
+    - '// @input string subtitleWord = "Corpse" {"hint":"Second word of the title, set italic in the accent colour."}'
+    - '// @input string straplineText = "3 PLAYERS · ONE PAIR · ONE CREATION" {"hint":"Strapline under the title."}'
+    - "// @input float straplineScale = 0.7 {\"hint\":\"Size of the strapline relative to the rest of the UI. Below 1 takes it under the type scale's smallest role, which is intended here so it sits well beneath the title.\", \"widget\":\"slider\", \"min\":0.4, \"max\":1.5, \"step\":0.05}"
+    - '// @input float ruleGapCm = 0.6 {"hint":"Gap between the title word and each flanking hairline, in centimetres.", "widget":"slider", "min":0.2, "max":6, "step":0.1}'
+    - '// @input float titleLeadingCm = -2.2 {"hint":"Vertical space between the two title words, in centimetres. Negative sets them tighter than the line height.", "widget":"slider", "min":-6, "max":4, "step":0.1}'
+    - '// @input float ruleThicknessCm = 0.25 {"hint":"Thickness of the hairlines flanking the title word, in centimetres. Below about 0.25 they fall under a pixel at panel distance and vanish.", "widget":"slider", "min":0.05, "max":1.5, "step":0.05}'
+    - '// @input float logoSizeCm = 14 {"hint":"Size of the logo mark above the title, in centimetres.", "widget":"slider", "min":4, "max":30, "step":0.5}'
+    - "// @input vec4 logoTint = \"{1.0, 1.0, 1.0, 1.0}\" {\"hint\":\"Tint multiplied into the logo. White keeps the artwork's own colours.\", \"widget\":\"color\"}"
+    - '// @input float readDistanceCm = 130 {"hint":"Distance from the viewer in centimetres. Scales all text on this panel.", "widget":"slider", "min":50, "max":250, "step":5}'
+    - '// @input vec4 accentColor = "{0.09, 0.69, 0.77, 1.0}" {"hint":"Accent colour: the italic title word and the capsule outlines. Matches the cyan in the hero art.", "widget":"color"}'
+    - "// @input float panelOpacity = 0.35 {\"hint\":\"Opacity of the panel's backing plate. Specs is additive, so a solid plate ADDS light and washes out the text on it. Keep low.\", \"widget\":\"slider\", \"min\":0.05, \"max\":1, \"step\":0.05}"
+    - '// @input float textScale = 1 {"hint":"Multiplier on EVERY text size on this panel — title, strapline and status together. For the headline alone use Title Scale.", "widget":"slider", "min":0.6, "max":2.5, "step":0.05}'
+    - '// @ui {"widget":"group_end"}'

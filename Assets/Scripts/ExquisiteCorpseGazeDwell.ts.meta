@@ -1,0 +1,59 @@
+- !<AssetImportMetadata/df272e8b-9d21-40e5-b2a2-3e1f58e90bcb>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 406402fa-d869-46e3-8155-6bdb74ae2b45
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 406402fa-d869-46e3-8155-6bdb74ae2b45
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 2bdb6e5b-1f9c-45b7-965a-603b11389a9c
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/2bdb6e5b-1f9c-45b7-965a-603b11389a9c>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 3d1a4a59-a036-4e83-85ad-5ecc835e158a
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    decayRate: false
+    dwellSeconds: false
+    rayLengthCm: false
+    retriggerDelay: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - dwellSeconds: 1.200000
+      decayRate: 2.500000
+      rayLengthCm: !<float> 500.000000
+      retriggerDelay: 0.600000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Gaze Dwell – head-gaze activation for UI zones only</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float dwellSeconds = 1.4 {"hint":"Base gaze-hold time in seconds. Individual zones scale this — destructive actions ask for longer.", "widget":"slider", "min":0.4, "max":5, "step":0.1}'
+    - '// @input float decayRate = 2.5 {"hint":"How quickly dwell progress drains after the gaze leaves a zone, as a multiple of fill speed.", "widget":"slider", "min":0.5, "max":6, "step":0.25}'
+    - '// @input float rayLengthCm = 500 {"hint":"How far the gaze ray reaches, in centimetres.", "widget":"slider", "min":100, "max":800, "step":10}'
+    - '// @input float retriggerDelay = 0.6 {"hint":"Pause after a zone fires before any zone can fire again, in seconds.", "widget":"slider", "min":0, "max":2, "step":0.1}'
+    - '// @ui {"widget":"group_end"}'

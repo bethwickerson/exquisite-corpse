@@ -1,0 +1,68 @@
+- !<AssetImportMetadata/10875ab6-2014-41c1-bae7-19a1d3b3e380>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> de8f1592-1e26-473d-a027-e69945497e42
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> de8f1592-1e26-473d-a027-e69945497e42
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> 54604b14-2319-4fbf-8de2-5d67e7da2d34
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/54604b14-2319-4fbf-8de2-5d67e7da2d34>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 085cf73c-8f0c-46e3-8209-5c30bfdbfee9
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    accentColor: false
+    headlineScale: false
+    panelHeightCm: false
+    panelOpacity: false
+    panelWidthCm: false
+    readDistanceCm: false
+    textScale: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - panelWidthCm: !<float> 37.000000
+      panelHeightCm: !<float> 26.000000
+      readDistanceCm: !<float> 150.000000
+      accentColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+      panelOpacity: 0.750000
+      textScale: !<float> 1.000000
+      headlineScale: 0.700000
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Pass UI – hand-over screen and READY dwell zone</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float panelWidthCm = 62 {"hint":"Panel width in centimetres.", "widget":"slider", "min":24, "max":80, "step":1}'
+    - '// @input float panelHeightCm = 18.5 {"hint":"Panel height in centimetres.", "widget":"slider", "min":14, "max":50, "step":1}'
+    - '// @input float readDistanceCm = 150 {"hint":"Distance from the viewer in centimetres. Scales all text on this panel.", "widget":"slider", "min":50, "max":250, "step":5}'
+    - '// @input vec4 accentColor = "{1.0, 1.0, 1.0, 1.0}" {"hint":"Outline colour of the READY capsule.", "widget":"color"}'
+    - "// @input float panelOpacity = 0.35 {\"hint\":\"Opacity of the panel's backing plate. Specs is additive, so a solid plate ADDS light and washes out the text on it. Keep low.\", \"widget\":\"slider\", \"min\":0.05, \"max\":1, \"step\":0.05}"
+    - "// @input float textScale = 1 {\"hint\":\"Extra multiplier on this panel's text size, on top of the global type scale. Raise if labels still read small on device.\", \"widget\":\"slider\", \"min\":0.6, \"max\":2.5, \"step\":0.05}"
+    - "// @input float headlineScale = 0.7 {\"hint\":\"Size of the 'PASS TO PLAYER N' line relative to the read distance. Sits a step above the instructional labels without becoming a poster.\", \"widget\":\"slider\", \"min\":0.25, \"max\":1.5, \"step\":0.05}"
+    - '// @ui {"widget":"group_end"}'

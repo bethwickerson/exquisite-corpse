@@ -1,0 +1,140 @@
+- !<AssetImportMetadata/acee5141-f79f-41a9-b624-1e2c5ff7b3ae>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 8cbc00dd-ca9a-468c-a42c-cc6bea4491c2
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 8cbc00dd-ca9a-468c-a42c-cc6bea4491c2
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> be54fa8d-e926-4f73-b07b-208e2a59562b
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/be54fa8d-e926-4f73-b07b-208e2a59562b>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 050d00b8-4d72-4af0-839c-3feab6bc5f7f
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    audioController: false
+    bandPromptUI: false
+    bandPrompts: false
+    canvasController: false
+    debugPhases: false
+    drawController: false
+    drawOnSeconds: false
+    finishedLabel: false
+    gazeDwell: false
+    hudRailNudgeCm: false
+    hudUI: false
+    infoUI: false
+    leanMaxDegrees: false
+    leanStrength: false
+    lifeDelaySeconds: false
+    paletteUI: false
+    paperFadeSeconds: false
+    passUI: false
+    placementUI: false
+    railContentOffsetCm: false
+    railGapCm: false
+    railVerticalOffsetCm: false
+    reaimEachTurn: false
+    revealUI: false
+    sectionCount: false
+    setupSettleSeconds: false
+    setupUI: false
+    strokeRenderer: false
+    titleFadeSeconds: false
+    titleHoldSeconds: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - canvasController: !<MappingBased.AssignableType_1> 00000000-0000-0000-0000-000000000000
+      strokeRenderer: !<MappingBased.AssignableType_2> 00000000-0000-0000-0000-000000000000
+      drawController: !<MappingBased.AssignableType_3> 00000000-0000-0000-0000-000000000000
+      gazeDwell: !<MappingBased.AssignableType_4> 00000000-0000-0000-0000-000000000000
+      audioController: !<MappingBased.AssignableType_5> 00000000-0000-0000-0000-000000000000
+      setupUI: !<MappingBased.AssignableType_6> 00000000-0000-0000-0000-000000000000
+      hudUI: !<MappingBased.AssignableType_7> 00000000-0000-0000-0000-000000000000
+      passUI: !<MappingBased.AssignableType_8> 00000000-0000-0000-0000-000000000000
+      revealUI: !<MappingBased.AssignableType_9> 00000000-0000-0000-0000-000000000000
+      bandPromptUI: !<MappingBased.AssignableType_10> 00000000-0000-0000-0000-000000000000
+      paletteUI: !<MappingBased.AssignableType_11> 00000000-0000-0000-0000-000000000000
+      placementUI: !<MappingBased.AssignableType_12> 00000000-0000-0000-0000-000000000000
+      infoUI: !<MappingBased.AssignableType_13> 00000000-0000-0000-0000-000000000000
+      sectionCount: !<float> 3.000000
+      bandPrompts: "Draw a Head, Draw a Body, Draw Legs"
+      reaimEachTurn: true
+      finishedLabel: Finished!
+      railGapCm: !<float> 8.000000
+      railContentOffsetCm: 2.650000
+      titleHoldSeconds: 1.600000
+      titleFadeSeconds: 0.900000
+      drawOnSeconds: 4.500000
+      paperFadeSeconds: 0.800000
+      lifeDelaySeconds: 0.500000
+      leanStrength: 0.350000
+      leanMaxDegrees: !<float> 14.000000
+      railVerticalOffsetCm: 4.280000
+      hudRailNudgeCm: 4.900000
+      setupSettleSeconds: !<float> 2.000000
+      debugPhases: false
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Exquisite Corpse – turn order, pass sequence, reveal</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"References"}'
+    - // @input AssignableType_1 canvasController
+    - // @input AssignableType_2 strokeRenderer
+    - // @input AssignableType_3 drawController
+    - // @input AssignableType_4 gazeDwell
+    - // @input AssignableType_5 audioController
+    - // @input AssignableType_6 setupUI
+    - // @input AssignableType_7 hudUI
+    - // @input AssignableType_8 passUI
+    - // @input AssignableType_9 revealUI
+    - // @input AssignableType_10 bandPromptUI
+    - // @input AssignableType_11 paletteUI
+    - // @input AssignableType_12 placementUI
+    - // @input AssignableType_13 infoUI
+    - '// @ui {"widget":"group_end"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float sectionCount = 3 {"hint":"How many sections the canvas is split into. Three matches the head / body / legs prompts.", "widget":"slider", "min":2, "max":6, "step":1}'
+    - '// @input string bandPrompts = "Draw a Head, Draw a Body, Draw Legs" {"hint":"Comma-separated instruction for each section, top to bottom. Shown at the bottom of the band being drawn. Leave an entry blank to give that player no prompt."}'
+    - '// @input bool reaimEachTurn = true {"hint":"At the start of each turn, turn the canvas to face whoever is wearing the glasses now. It stays exactly where it was locked; only the facing changes. Off means it keeps the facing player 1 placed it with for the whole game."}'
+    - '// @input string finishedLabel = "The Finished Piece" {"hint":"Title card shown on its own once the last player is done, before the drawing appears."}'
+    - "// @input float railGapCm = 4 {\"hint\":\"Clear space between the canvas edge and each side rail, in centimetres. Measured from the rail's drawn plate, not its content box.\", \"widget\":\"slider\", \"min\":0, \"max\":30, \"step\":0.5}"
+    - "// @input float railContentOffsetCm = 2.65 {\"hint\":\"Corrects a UIKit Frame drawing its content off-centre. Measured, not guessed: a rail's drawn subtree spans about -1.1 to +7.2cm around its own origin, so without this the LEFT rail eats into the canvas while the RIGHT one floats too far out. Raise if the palette still touches the canvas.\", \"widget\":\"slider\", \"min\":-6, \"max\":6, \"step\":0.05}"
+    - '// @input float titleHoldSeconds = 1.6 {"hint":"Seconds the title card holds on screen alone before it starts to fade. Nothing else is visible during this beat.", "widget":"slider", "min":0, "max":6, "step":0.1}'
+    - '// @input float titleFadeSeconds = 0.9 {"hint":"Seconds the title card takes to fade out.", "widget":"slider", "min":0.1, "max":4, "step":0.1}'
+    - '// @input float drawOnSeconds = 4.5 {"hint":"Seconds the drawing takes to draw itself back on, stroke by stroke, in the order it was made.", "widget":"slider", "min":1, "max":20, "step":0.5}'
+    - '// @input float paperFadeSeconds = 0.8 {"hint":"Seconds the guide lines take to fade away at the reveal. These lines ARE the paper: an additive display cannot paint an opaque white sheet, so the outline and folds stand in for one, and fading them is the sheet coming away.", "widget":"slider", "min":0, "max":4, "step":0.1}'
+    - '// @input float lifeDelaySeconds = 0.5 {"hint":"Seconds the drawing takes to come alive after the paper has gone. The pause matters: the first blink should land after the corpse has been registered, so it reads as a reaction rather than an idle loop.", "widget":"slider", "min":0, "max":4, "step":0.1}'
+    - '// @input float leanStrength = 0.35 {"hint":"How far the finished drawing turns toward whoever is looking, as a fraction of the true angle. Well under 1, or it reads as a billboard following you around.", "widget":"slider", "min":0, "max":1, "step":0.05}'
+    - '// @input float leanMaxDegrees = 14 {"hint":"Hard limit on that turn, in degrees.", "widget":"slider", "min":0, "max":40, "step":1}'
+    - "// @input float railVerticalOffsetCm = 4.28 {\"hint\":\"Drops both side rails so their DRAWN plate tops sit level with the canvas top. A Frame's plate is offset upward from its content, so without this the rails float above the sheet even at zero lift.\", \"widget\":\"slider\", \"min\":0, \"max\":12, \"step\":0.05}"
+    - "// @input float hudRailNudgeCm = 3.5 {\"hint\":\"Extra outward push for the RIGHT-hand control rail only, in centimetres. A Frame's content sits about 3cm left of its plate, which carries the left rail safely away from the canvas but drives the right rail's buttons into it — so the two sides cannot share one correction.\", \"widget\":\"slider\", \"min\":0, \"max\":10, \"step\":0.1}"
+    - '// @input float setupSettleSeconds = 2 {"hint":"Seconds after the home screen appears during which it keeps re-facing the viewer. At a cold start the camera pose is not established on the first frame, so a panel placed once ends up somewhere the player is not looking — which is why the lens can open to an empty view until it is refreshed. It stops tracking once this elapses, so the panel stays draggable.", "widget":"slider", "min":0, "max":6, "step":0.1}'
+    - '// @input bool debugPhases {"hint":"Log phase transitions to the console."}'
+    - '// @ui {"widget":"group_end"}'

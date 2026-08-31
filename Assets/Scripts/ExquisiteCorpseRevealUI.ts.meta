@@ -1,0 +1,68 @@
+- !<AssetImportMetadata/514bfd9c-0033-40b5-b9a0-696dd6c4afcb>
+  ImportedAssetIds:
+    TypeScriptAsset: !<reference> 85edfc1d-ea08-4732-9f76-e6b2bdd1d7d4
+  ImporterName: TypeScriptAssetImporter
+  PrimaryAsset: !<reference> 85edfc1d-ea08-4732-9f76-e6b2bdd1d7d4
+  PackageType: NotAPackage
+  LegacyPackagePolicy: ~
+  ExtraData:
+    {}
+  AssetDataMap:
+    TypeScriptAsset: !<own> ca8bf006-e599-4cc2-9967-d3f5fd1053e6
+  DependentFiles:
+    []
+  ImporterSettings: !<AssetImporterSettings>
+    {}
+  CompressionSettings: !<own> 00000000-0000-0000-0000-000000000000
+- !<TypeScriptAssetData/ca8bf006-e599-4cc2-9967-d3f5fd1053e6>
+  SvgIcon: ""
+  SetupScript:
+    code: ""
+  Description: ""
+  VersionMajor: 0
+  VersionMinor: 0
+  VersionPatch: 0
+  VersionPrerelease: ""
+  UpdateOrder: 0
+  ComponentUid: 4e3a47ff-a6fd-445c-b958-b629a6b56e0c
+  ExportUid: 00000000-0000-0000-0000-000000000000
+  PackagePolicy: CanBeUnpacked
+  ScriptInputsHidden:
+    accentColor: false
+    buttonGapCm: false
+    buttonHeightCm: false
+    buttonWidthCm: false
+    playAgainLabel: false
+    readDistanceCm: false
+    replayLabel: false
+  ScriptTypesHidden:
+    {}
+  ReadMe: !<reference> 00000000-0000-0000-0000-000000000000
+  DeclarationFile: !<reference> 00000000-0000-0000-0000-000000000000
+  Tags:
+    []
+  Attachments:
+    []
+  DefaultScriptInputs:
+    - buttonWidthCm: 15.500000
+      buttonHeightCm: !<float> 4.000000
+      buttonGapCm: 1.600000
+      replayLabel: REPLAY
+      playAgainLabel: NEW GAME
+      readDistanceCm: !<float> 110.000000
+      accentColor: !<Vec4> {x: 1.000000, y: 1.000000, z: 1.000000, w: 1.000000}
+  ScriptTypes:
+    -
+      {}
+  InputLines:
+    - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">Reveal UI – REPLAY and NEW GAME, under the drawing</span>"}'
+    - '// @ui {"widget":"separator"}'
+    - '// @ui {"widget":"group_start", "label":"Settings"}'
+    - '// @input float buttonWidthCm = 20 {"hint":"Width of each pill in centimetres.", "widget":"slider", "min":8, "max":40, "step":0.5}'
+    - '// @input float buttonHeightCm = 5 {"hint":"Height of each pill in centimetres.", "widget":"slider", "min":3, "max":12, "step":0.5}'
+    - '// @input float buttonGapCm = 2.5 {"hint":"Horizontal gap between the two pills, in centimetres.", "widget":"slider", "min":0.5, "max":10, "step":0.1}'
+    - '// @input string replayLabel = "REPLAY" {"hint":"Label on the button that plays the drawing back from the start."}'
+    - '// @input string playAgainLabel = "NEW GAME" {"hint":"Label on the button that clears the drawing and starts over."}'
+    - '// @input float readDistanceCm = 150 {"hint":"Distance from the viewer in centimetres.", "widget":"slider", "min":50, "max":250, "step":5}'
+    - '// @input vec4 accentColor = "{1.0, 1.0, 1.0, 1.0}" {"hint":"Outline colour of the circle.", "widget":"color"}'
+    - '// @ui {"widget":"group_end"}'
