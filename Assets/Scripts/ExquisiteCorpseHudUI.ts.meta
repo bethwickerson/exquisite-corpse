@@ -64,7 +64,7 @@
     - '// @ui {"widget":"label", "label":"<span style=\"color: #60A5FA;\">HUD Rail – vertical DONE / player / UNDO beside the canvas</span>"}'
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Settings"}'
-    - '// @input float panelHeightCm = 34 {"hint":"Rail height in centimetres.", "widget":"slider", "min":14, "max":60, "step":0.5}'
+    - '// @input float panelHeightCm = 26.4 {"hint":"Rail height in centimetres.", "widget":"slider", "min":14, "max":60, "step":0.5}'
     - '// @input float buttonSizeCm = 6 {"hint":"Diameter of the round DONE and UNDO buttons, in centimetres. Below about 6cm at this distance they fall under the gaze-dwell target minimum.", "widget":"slider", "min":4, "max":16, "step":0.5}'
     - '// @input float extraWidthCm = 0.1 {"hint":"Space added around the controls to make the plate, in centimetres. This is the direct width control: the rail is always the widest control plus this, so it can never end up too narrow to hold its contents. Negative pulls the plate in tighter than the buttons.", "widget":"slider", "min":-2, "max":8, "step":0.1}'
     - '// @input float iconScale = 1.15 {"hint":"Multiplier on the icon inside each button. Above 1 makes the glyph fill more of the circle.", "widget":"slider", "min":0.5, "max":2, "step":0.05}'

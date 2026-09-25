@@ -4,7 +4,7 @@
 // canvas rather than above it, so nothing competes with the drawing surface for
 // the limited vertical field of view.
 //
-// Top to bottom: the player indicator, DONE (solid white disc), UNDO, mute.
+// Top to bottom: the player indicator, DONE (solid white disc), UNDO.
 //
 // The two buttons are icon-only circles. DONE is a white disc with the tick
 // knocked OUT of its alpha rather than a black tick drawn on white: Specs is an
@@ -36,8 +36,6 @@ import {
 } from "./ExquisiteCorpseUiCommon"
 
 const ICON_UNDO = requireAsset("../Icons/undo.png") as Texture
-const ICON_SOUND_ON = requireAsset("../Icons/volume_up.png") as Texture
-const ICON_SOUND_OFF = requireAsset("../Icons/volume_off.png") as Texture
 const ICON_CHECK_FILLED = requireAsset("../Icons/check_filled.png") as Texture
 const ICON_PLAYER = requireAsset("../Icons/person.png") as Texture
 
@@ -56,7 +54,7 @@ export class ExquisiteCorpseHudUI extends BaseScriptComponent {
   @input
   @hint("Rail height in centimetres.")
   @widget(new SliderWidget(14, 60, 0.5))
-  panelHeightCm: number = 34
+  panelHeightCm: number = 26.4
 
   @input
   @hint("Diameter of the round DONE and UNDO buttons, in centimetres. Below about 6cm at this distance they fall under the gaze-dwell target minimum.")
@@ -105,8 +103,6 @@ export class ExquisiteCorpseHudUI extends BaseScriptComponent {
   @ui.group_end
 
   private undoBtn: NeonButton | null = null
-  private muteBtn: NeonButton | null = null
-  private muteCell: SceneObject | null = null
 
   /**
    * Rail width is DERIVED from its widest row, so it hugs the controls instead
@@ -145,7 +141,6 @@ export class ExquisiteCorpseHudUI extends BaseScriptComponent {
 
   private _onUndo = new Event<void>()
   private _onDone = new Event<void>()
-  private _onMuteToggled = new Event<void>()
 
   get onUndo(): PublicApi<void> {
     return this._onUndo
@@ -153,10 +148,6 @@ export class ExquisiteCorpseHudUI extends BaseScriptComponent {
 
   get onDone(): PublicApi<void> {
     return this._onDone
-  }
-
-  get onMuteToggled(): PublicApi<void> {
-    return this._onMuteToggled
   }
 
   onAwake(): void {
@@ -252,24 +243,6 @@ export class ExquisiteCorpseHudUI extends BaseScriptComponent {
         })
       })
 
-      this.muteCell = flexChild(col, {w: D, h: D}, (cell) => {
-        this.muteBtn = new NeonButton(cell, {
-          text: "",
-          widthCm: D,
-          heightCm: D,
-          distanceCm: this.readDistanceCm,
-          icon: ICON_SOUND_ON,
-          accent: this.accentColor,
-          iconScale: this.iconScale,
-          cornerRoundness: 0.5
-        })
-        // Pinch, not dwell: muting is cheap to undo, so it does not warrant the
-        // deliberate hold the commit actions get.
-        this.muteBtn.onTrigger(() => {
-          if (this.armed) this._onMuteToggled.invoke()
-        })
-      })
-
       this.frameReady = true
       this.applyInitialVisibility()
     })
@@ -286,11 +259,6 @@ export class ExquisiteCorpseHudUI extends BaseScriptComponent {
     if (this.playerNumber) this.playerNumber.text = String(index + 1)
   }
 
-  /** Swap the speaker glyph so the button shows the CURRENT state. */
-  setMuted(muted: boolean): void {
-    if (this.muteBtn) this.muteBtn.setIcon(muted ? ICON_SOUND_OFF : ICON_SOUND_ON)
-  }
-
   setUndoEnabled(on: boolean): void {
     if (this.undoBtn) this.undoBtn.setEnabled(on)
   }
@@ -300,7 +268,6 @@ export class ExquisiteCorpseHudUI extends BaseScriptComponent {
     if (this.controlsCell) this.controlsCell.enabled = on
     if (this.doneCell) this.doneCell.enabled = on
     if (this.playerCell) this.playerCell.enabled = on
-    if (this.muteCell) this.muteCell.enabled = on
   }
 
   setDwellProgress(buttonName: string, t: number): void {

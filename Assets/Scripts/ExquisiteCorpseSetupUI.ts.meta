@@ -84,7 +84,7 @@
     - '// @ui {"widget":"group_end"}'
     - '// @ui {"widget":"separator"}'
     - '// @ui {"widget":"group_start", "label":"Settings"}'
-    - '// @input float utilityButtonSizeCm = 6 {"hint":"Diameter of the round mute and info buttons under PLAY, in centimetres.", "widget":"slider", "min":3, "max":12, "step":0.5}'
+    - '// @input float utilityButtonSizeCm = 6 {"hint":"Diameter of the round info button under PLAY, in centimetres.", "widget":"slider", "min":3, "max":12, "step":0.5}'
     - '// @input float panelWidthCm = 56 {"hint":"Panel width in centimetres.", "widget":"slider", "min":24, "max":80, "step":1}'
     - '// @input float panelHeightCm = 68 {"hint":"Panel height in centimetres.", "widget":"slider", "min":16, "max":60, "step":1}'
     - '// @input string titleText = "Exquisite" {"hint":"First word of the title, set upright in the serif face."}'

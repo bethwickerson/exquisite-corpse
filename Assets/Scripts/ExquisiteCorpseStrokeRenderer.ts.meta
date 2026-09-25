@@ -84,19 +84,19 @@
       activeCornerWidthCm: 0.650000
       activeCornerOutsetCm: !<float> 0.000000
       activeCornerColor: !<Vec4> {x: 0.321584, y: 0.629404, z: 0.637644, w: 0.530007}
-      tiltDegrees: 0.800000
+      tiltDegrees: 1.200000
       tiltSpeed: 0.130000
       lifeRampSeconds: 1.400000
-      breathAmplitudeCm: 0.550000
+      breathAmplitudeCm: 0.350000
       headRipple: !<float> 0.000000
-      hairRipple: 1.550000
-      torsoRipple: 0.600000
-      legsRipple: 0.700000
-      breathWavelengthCm: !<float> 21.000000
+      hairRipple: 1.100000
+      torsoRipple: 0.250000
+      legsRipple: 0.350000
+      breathWavelengthCm: !<float> 11.000000
       breathSpeed: 0.050000
-      mouthOpenAmount: 0.350000
+      mouthOpenAmount: 0.250000
       mouthSpeed: 0.100000
-      blinkHoldSeconds: 0.120000
+      blinkHoldSeconds: 0.110000
       blinkIntervalSeconds: 4.950000
       activeCornerBrightness: 2.150000
       paletteColor1: !<Vec4> {x: 0.930037, y: 0.820798, z: 0.136751, w: 1.000000}

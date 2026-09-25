@@ -16,8 +16,6 @@ import {Frame} from "SpectaclesUIKit.lspkg/Scripts/Components/Frame/Frame"
 import {FlexAlign, FlexJustify} from "SpectaclesUIKit.lspkg/Scripts/Components/Layout2D/Flex/FlexTypes"
 import Event, {PublicApi} from "SpectaclesInteractionKit.lspkg/Utils/Event"
 
-const ICON_SOUND_ON = requireAsset("../Icons/volume_up.png") as Texture
-const ICON_SOUND_OFF = requireAsset("../Icons/volume_off.png") as Texture
 const ICON_HELP = requireAsset("../Icons/question_mark.png") as Texture
 
 import {
@@ -51,7 +49,7 @@ export class ExquisiteCorpseSetupUI extends BaseScriptComponent {
   @ui.separator
   @ui.group_start("Settings")
   @input
-  @hint("Diameter of the round mute and info buttons under PLAY, in centimetres.")
+  @hint("Diameter of the round info button under PLAY, in centimetres.")
   @widget(new SliderWidget(3, 12, 0.5))
   utilityButtonSizeCm: number = 6
 
@@ -136,7 +134,6 @@ export class ExquisiteCorpseSetupUI extends BaseScriptComponent {
 
   private statusText: Text | null = null
   private placeBtn: NeonButton | null = null
-  private muteBtn: NeonButton | null = null
   private infoBtn: NeonButton | null = null
   private wantVisible: boolean = true
   // Set once the Frame has initialised and built its content. Until then a
@@ -146,15 +143,10 @@ export class ExquisiteCorpseSetupUI extends BaseScriptComponent {
   private frameReady: boolean = false
 
   private _onPlaceRequested = new Event<void>()
-  private _onMuteToggled = new Event<void>()
   private _onInfoRequested = new Event<void>()
 
   get onPlaceRequested(): PublicApi<void> {
     return this._onPlaceRequested
-  }
-
-  get onMuteToggled(): PublicApi<void> {
-    return this._onMuteToggled
   }
 
   get onInfoRequested(): PublicApi<void> {
@@ -262,25 +254,14 @@ export class ExquisiteCorpseSetupUI extends BaseScriptComponent {
         this.placeBtn.onTrigger(() => this._onPlaceRequested.invoke())
       })
 
-      // Mute and info, side by side under PLAY. Icon-only circles, matching the
-      // in-game controls so the vocabulary stays consistent.
+      // Info, centred under PLAY. An icon-only circle, matching the in-game
+      // controls so the vocabulary stays consistent.
       const D = this.utilityButtonSizeCm
       flexChild(col, {w: W - 4, h: D + 0.6, mt: 1.2}, (c) => {
         const row = flexRow(c, W - 5, D + 0.4, {
           gap: 2.4,
           justify: FlexJustify.Center,
           align: FlexAlign.Center
-        })
-        flexChild(row, {w: D, h: D}, (cell) => {
-          this.muteBtn = new NeonButton(cell, {
-            text: "",
-            widthCm: D,
-            heightCm: D,
-            icon: ICON_SOUND_ON,
-            accent: this.accentColor,
-            cornerRoundness: 0.5
-          })
-          this.muteBtn.onTrigger(() => this._onMuteToggled.invoke())
         })
         flexChild(row, {w: D, h: D}, (cell) => {
           this.infoBtn = new NeonButton(cell, {
@@ -312,11 +293,6 @@ export class ExquisiteCorpseSetupUI extends BaseScriptComponent {
       this.frameReady = true
       this.applyInitialVisibility()
     })
-  }
-
-  /** Swap the speaker glyph so the button shows the CURRENT state. */
-  setMuted(muted: boolean): void {
-    if (this.muteBtn) this.muteBtn.setIcon(muted ? ICON_SOUND_OFF : ICON_SOUND_ON)
   }
 
   setStatus(msg: string): void {

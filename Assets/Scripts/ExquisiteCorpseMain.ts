@@ -238,11 +238,6 @@ export class ExquisiteCorpseMain extends BaseScriptComponent {
     })
     this.placementUI.onLockRequested.add(() => this.lockCanvas())
 
-    this.setupUI.onMuteToggled.add(() => {
-      const muted = this.audioController.toggleMute()
-      this.setupUI.setMuted(muted)
-      this.hudUI.setMuted(muted)
-    })
     this.setupUI.onInfoRequested.add(() => this.showInfo())
     this.infoUI.onPlay.add(() => {
       this.infoUI.hide()
@@ -251,11 +246,6 @@ export class ExquisiteCorpseMain extends BaseScriptComponent {
 
     this.hudUI.onUndo.add(() => this.onUndo())
     this.hudUI.onDone.add(() => this.finishTurn())
-    this.hudUI.onMuteToggled.add(() => {
-      const muted = this.audioController.toggleMute()
-      this.hudUI.setMuted(muted)
-      this.setupUI.setMuted(muted)
-    })
     this.passUI.onReady.add(() => this.onReady())
       this.revealUI.onPlayAgain.add(() => this.playAgain())
     this.revealUI.onReplay.add(() => this.replayDrawOn())
@@ -298,7 +288,6 @@ export class ExquisiteCorpseMain extends BaseScriptComponent {
     this.placementUI.hide()
     this.infoUI.hide()
     this.setupUI.show()
-    this.setupUI.setMuted(this.audioController.isMuted)
     this.setupUI.setStatus("")
     this.placeSetupPanel()
   }
@@ -484,7 +473,6 @@ export class ExquisiteCorpseMain extends BaseScriptComponent {
     this.paletteUI.show()
 
     this.hudUI.setPlayer(index)
-    this.hudUI.setMuted(this.audioController.isMuted)
     this.hudUI.setControlsVisible(true)
     this.hudUI.setUndoEnabled(false)
     this.hudUI.show()

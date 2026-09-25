@@ -13,7 +13,7 @@ metaInfo:
     []
   tags:
     []
-  lensName: SpecsBaseTemplate
+  lensName: Exquisite Corpse
   lensDescriptors:
     - AI_MUTATED
   lensApplicableContext:
@@ -26,7 +26,7 @@ metaInfo:
   lensClientCompatibilities:
     - Spectacles
   platformBundlesEnabled: false
-  iconHash: ""
+  iconHash: 378e35610d7fdf6bb1b22a2ba9f485ba
   videoPreviewHash: ""
   fromTemplateName: Specs Base Template
   fromTemplateUrl: Lens Studio 5.23.2.26081320
@@ -46,8 +46,8 @@ metaInfo:
     build: 0
   documentId: c945334d-826b-4ec6-8a69-aeef9a643df5
   originalDocumentId: 4492aa5f-47e4-4abe-9643-7d6f708b0869
-  packageId: ""
-  packageVersion: ""
+  packageId: com.example.specsbasetemplate
+  packageVersion: 0.0.1
   spkPrivilegeLevel: Generic
   gluboEnabled: false
 targetPlatform: Spectacles
